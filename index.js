@@ -67,7 +67,8 @@ const colorNode = document.querySelector('#j_color');
 
 /**
  * RGB 转换为 HEX
- * @param {String} c RGB 颜色值 
+ * @param {String} c RGB 颜色值
+ * 参考：https://haacked.com/archive/2009/12/29/convert-rgb-to-hex.aspx/ 
  */
 function hex(c) {
 
