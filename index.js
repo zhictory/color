@@ -7,10 +7,16 @@ const colorNode = document.querySelector('#j_color');
 
   for (let i = 0; i < color.length; i++) {
     const li = document.createElement('li');
-    const text = document.createTextNode(color[i]['name']);
+    const br = document.createElement('br');
+    const zhText = document.createTextNode(color[i]['zh']);
+    const enText = document.createTextNode(color[i]['en']);
     li.setAttribute('class', 'color__item');
-    li.style.backgroundColor = color[i]['value'];
-    li.appendChild(text);
+    li.style.backgroundColor = color[i]['hex'];
+    li.appendChild(zhText);
+    if (enText) {
+      li.appendChild(br);
+      li.appendChild(enText);
+    }
     fragment.appendChild(li);
   }
 
